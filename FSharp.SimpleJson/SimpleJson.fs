@@ -15,6 +15,7 @@ module SimpleJson =
             | JTokenType.Integer -> JNumber (token.Value<float>())
             | JTokenType.Boolean -> JBool (token.Value<bool>())
             | JTokenType.String -> JString (token.Value<string>())
+            | JTokenType.Guid -> JString (token.Value<System.Guid>().ToString())
             | JTokenType.Null -> JNull 
             | JTokenType.Array -> 
                 token.Values<JToken>()
@@ -27,8 +28,13 @@ module SimpleJson =
                 |> List.ofSeq 
                 |> Map.ofList 
                 |> Json.JObject 
-            | _ -> JNull
+            | _ -> failwithf "JSON token type '%s' was not recognised" (token.Type.ToString()) 
         fromJToken token
+
+    /// Tries to parse the input string as structured data 
+    let tryParse input = 
+        try Ok (parse input) 
+        with | ex -> Error ex.Message
 
     /// Stringifies a Json object back to string representation
     let rec toString = function
