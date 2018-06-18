@@ -1,0 +1,11 @@
+source https://www.nuget.org/api/v2
+
+storage:none
+nuget Expecto
+nuget FSharp.Core
+nuget Newtonsoft.JSON
+
+group Build
+    framework >= net45
+    source https://www.nuget.org/api/v2
+    nuget FAKE ~> 4.64.13

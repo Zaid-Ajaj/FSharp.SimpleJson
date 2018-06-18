@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>A library for easily parsing, transforming and converting JSON for F#</Description>
+    <PackageProjectUrl>https://github.com/Zaid-Ajaj/FSharp.SimpleJson</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Zaid-Ajaj/FSharp.SimpleJson.git</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/Zaid-Ajaj/FSharp.SimpleJson</PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>fsharp;json;converter</PackageTags>
+    <Authors>Zaid Ajaj</Authors>
+    <Version>1.0.0</Version>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="SimpleJson.fs" />
+    <Compile Include="Reflect.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>
