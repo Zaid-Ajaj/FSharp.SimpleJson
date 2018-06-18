@@ -2,8 +2,8 @@ source https://www.nuget.org/api/v2
 
 storage:none
 nuget Expecto
-nuget FSharp.Core
-nuget Newtonsoft.JSON
+nuget FSharp.Core ~> 4.3.1
+nuget Newtonsoft.JSON ~> 11.0.1
 
 group Build
     framework >= net45
