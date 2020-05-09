@@ -5,7 +5,7 @@ A library for easily parsing, transforming and converting JSON in F#. Ported fro
 ### Installation
 Install from nuget using paket
 ```sh
-paket add nuget Fable.SimpleJson --project path/to/YourProject.fsproj 
+paket add nuget FSharp.SimpleJson --project path/to/YourProject.fsproj 
 ```
 Make sure the references are added to your paket files
 ```sh
